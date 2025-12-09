@@ -6,7 +6,7 @@ st.set_page_config(page_title="Weather Predictor", page_icon="⛅")
 st.title("🌦️ Weather Predictor App")
 st.write("Enter a city name below to get the current weather details.")
 
-API_KEY = "abc123def456ghi789jkl012mno345pq"
+API_KEY="abc123def456ghi789jkl012mno345pq"
 # Replace with your key
 
 def get_weather(city):
