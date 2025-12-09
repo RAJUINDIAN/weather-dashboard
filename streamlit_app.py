@@ -8,7 +8,7 @@ st.title("🌦️ Weather Predictor App")
 st.write("Enter a city name below to get the current weather details.")
 
 # Your OpenWeatherMap API Key
-API_KEY = "YOUR_API_KEY_HERE"  # Replace with your key
+API_KEY = "a3b4c5d6e7f8g9h0i1j2k3l4m5n6"  # Replace with your key
 
 # Function to get weather
 def get_weather(city):
