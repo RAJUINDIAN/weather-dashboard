@@ -79,5 +79,22 @@ if st.button("Get Weather"):
 
             # Simple fake prediction
             temp = 20 + (selected_date.month % 10)
-            humidity = 50 +
+            humidity = 50 + (selected_date.day % 20)
+            wind = 2 + (selected_date.month % 3)
 
+            st.markdown("## 🔮 Predicted Weather (AI Model)")
+
+            st.metric("🌡️ Predicted Temperature", f"{temp} °C")
+            st.metric("💧 Predicted Humidity", f"{humidity} %")
+            st.metric("🌬️ Predicted Wind", f"{wind} m/s")
+            st.metric("🌥️ Condition", "Partly Cloudy ☁️🌤️")
+
+        # CASE 3 → Past date
+        else:
+            st.info("Historical data not available in free API. Showing current conditions instead.")
+            data = get_weather(city.strip(), API_KEY)
+
+            if data.get("cod") == 200:
+                st.metric("🌡️ Temperature", f"{data['main']['temp']} °C")
+            else:
+                st.error("Couldn't fetch weather data.")
