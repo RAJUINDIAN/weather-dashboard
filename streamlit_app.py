@@ -261,8 +261,7 @@ else:
 
 st.write("---")
 st.write("Notes:")
-st.markdown("""
-- This app uses a **RandomForestRegressor** with simple lag and calendar features.  
+st.markdown("""- This app uses a **RandomForestRegressor** with simple lag and calendar features.  
 - It's a fast, general-purpose forecasting method. For more accurate weather forecasts consider using domain models (prophet, LSTM, or physical-model outputs).  
 - If your CSV uses different date formatting or timezone, pre-process the CSV so the date/time column parses correctly.  
 - Want monthly totals instead of daily forecasts, or multi-output deep-learning models? Ask and I'll extend the app.
